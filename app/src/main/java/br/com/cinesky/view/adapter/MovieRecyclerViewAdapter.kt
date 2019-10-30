@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cinesky.R
 import br.com.cinesky.model.MovieResult
+import br.com.cinesky.view.interfaces.OnClick
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.movie_item_recyclerview.view.*
 
-class MovieRecyclerViewAdapter(var movieList: MutableList<MovieResult>) :
+class MovieRecyclerViewAdapter(var movieList: MutableList<MovieResult>, val listener: OnClick) :
     RecyclerView.Adapter<MovieRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,6 +26,10 @@ class MovieRecyclerViewAdapter(var movieList: MutableList<MovieResult>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val movie = movieList.get(position)
         holder.onBind(movie)
+
+        holder.itemView.setOnClickListener {
+            listener.clickMovie(movie)
+        }
     }
 
     fun updateList(newList: MutableList<MovieResult>) {

@@ -2,4 +2,8 @@
     <string name="app_name">Cine Sky</string>
     <string name="title">Uma seleção de filmes imperdiveis</string>
     <string name="movie_name">Movie Name</string>
+    <string name="duration">Duration</string>
+    <string name="release_year">Release Year</string>
+    <string name="overview">Overview</string>
+    <string name="movie_name">Movie Name</string>
 </resources>

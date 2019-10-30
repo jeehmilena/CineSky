@@ -14,9 +14,9 @@ class MovieViewModel : ViewModel() {
     private val movieList: MutableLiveData<List<MovieResult>> = MutableLiveData()
     val movieListResult: LiveData<List<MovieResult>> = movieList
     private val loading: MutableLiveData<Boolean> = MutableLiveData()
-    val loadingResult: MutableLiveData<Boolean> = loading
+    val loadingResult: LiveData<Boolean> = loading
     private val error: MutableLiveData<String> = MutableLiveData()
-    val errorResult: MutableLiveData<String> = error
+    val errorResult: LiveData<String> = error
 
     fun getAllMovies() {
         disposable.add(
