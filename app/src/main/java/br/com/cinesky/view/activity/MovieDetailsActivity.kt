@@ -30,14 +30,8 @@ class MovieDetailsActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.getItemId()) {
-            android.R.id.home -> {
-                startActivity(
-                    Intent(
-                        this,
-                        HomeActivity::class.java
-                    )
-                )
+        when (item.getItemId()) {android.R.id.home -> {
+                startActivity( Intent(this, HomeActivity::class.java))
                 finishActivity(0)
             }
         }
