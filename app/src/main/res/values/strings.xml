@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Cine Sky</string>
+    <string name="title">Uma seleção de filmes imperdiveis</string>
+    <string name="movie_name">Movie Name</string>
 </resources>
